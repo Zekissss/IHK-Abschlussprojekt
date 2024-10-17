@@ -1,15 +1,25 @@
 {
-  "name": "cypress-test",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "cypress": "^13.15.0"
-  }
+    "name": "salevali_cypress_web_tests",
+    "version": "1.0.0",
+    "description": "Cypress tests for SaleVali web page",
+    "main": "index.js",
+    "scripts": {
+        "test": "npx cypress run",
+        "open": "npx cypress open",
+        "smokeTest": "npx cypress run --env tags=@smoke",
+        "regressionTest": "npx cypress run --env tags=@regression"
+    },
+    "author": "Zekiye",
+    "license": "ISC",
+    "devDependencies": {
+        "cypress": "^13.15.0",
+        "cypress-dotenv": "^2.0.0",
+        "cypress-file-upload": "^5.0.8",
+        "cypress-mochawesome-reporter": "^3.8.2",
+        "cypress-xpath": "^2.0.1",
+        "dotenv": "^16.4.5"
+    },
+    "dependencies": {
+        "cypress-grep": "^2.14.0"
+    }
 }
