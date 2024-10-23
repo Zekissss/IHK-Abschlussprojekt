@@ -5,28 +5,34 @@ require('dotenv').config();  // .env dosyasını okumak için dotenv kullanılı
 module.exports = defineConfig({
   projectId: 'yp4ssz',
   experimentalStudio: true,
-  
-  // Reporter: Birden fazla raporlayıcıdan sadece birini seçin (JUnit veya Mochawesome)
-  reporter: 'cypress-mochawesome-reporter',  // Alternatif olarak 'junit' seçebilirsiniz
+
+  // Multi-reporter kullanarak birden fazla raporlayıcı tanımlayın
+  reporter: 'cypress-multi-reporters',
   reporterOptions: {
-    overwrite: true, 
-    charts: true,
-    reportPageTitle: 'ToolShop Project Report',
-    reportFilename: "[status]_[datetime]-[name]-report",
-    timestamp: "shortDate",
-    embeddedScreenshots: true,
-    inlineAssets: true,
-    saveAllAttempts: false,
-    ignoreVideos: false,
-    videoOnFailOnly: false,
-    mochaFile: 'results/test-results-[hash].xml',  // JUnit raporları için seçenek
-    toConsole: true
+    // Multi-reporters seçeneklerini burada tanımlayın
+    reporterEnabled: 'cypress-mochawesome-reporter, mocha-junit-reporter',
+    mochaJunitReporterReporterOptions: {
+      mochaFile: 'results/junit/test-results-[hash].xml',  // JUnit raporlarının dosya yolu
+      toConsole: true
+    },
+    cypressMochawesomeReporterReporterOptions: {
+      overwrite: true, 
+      charts: true,
+      reportPageTitle: 'ToolShop Project Report',
+      reportFilename: "[status]_[datetime]-[name]-report",
+      timestamp: "shortDate",
+      embeddedScreenshots: true,
+      inlineAssets: true,
+      saveAllAttempts: false,
+      ignoreVideos: false,
+      videoOnFailOnly: true   // Başarısız testlerde sadece video kaydı
+    }
   },
-  
+
   screenshotOnRunFailure: true,
   trashAssetsBeforeRuns: true,
-  video: false,
-  
+  video: true,   // Video kaydını açtık
+
   retries: {
     runMode: 3,
     openMode: 0,
@@ -50,3 +56,5 @@ module.exports = defineConfig({
     downloadsFolder: 'cypress/downloads',
   },
 });
+
+

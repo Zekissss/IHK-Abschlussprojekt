@@ -16,8 +16,10 @@
         "cypress-dotenv": "^2.0.0",
         "cypress-file-upload": "^5.0.8",
         "cypress-mochawesome-reporter": "^3.8.2",
+        "cypress-multi-reporters": "^1.6.4",
         "cypress-xpath": "^2.0.1",
-        "dotenv": "^16.4.5"
+        "dotenv": "^16.4.5",
+        "mocha-junit-reporter": "^2.2.1"
     },
     "dependencies": {
         "cypress-grep": "^2.14.0"
