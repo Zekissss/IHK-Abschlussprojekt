@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="107.278" tests="5" failures="5">
+  <testsuite name="Root Suite" timestamp="2024-10-24T22:08:37" tests="0" file="cypress\e2e\login.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Login Page Tests" timestamp="2024-10-24T22:08:37" tests="5" time="107.264" failures="5">
+    <testcase name="Login Page Tests Successful Login with Correct Credentials" time="8.597" classname="Successful Login with Correct Credentials">
+      <failure message="Timed out retrying after 4000ms: expected &apos;https://app.salevali.com/auth/login&apos; to include &apos;/dashboard&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected 'https://app.salevali.com/auth/login' to include '/dashboard'
+    at Context.eval (webpack://salevali_cypress_web_tests/./cypress/e2e/login.cy.js:15:15)]]></failure>
+    </testcase>
+    <testcase name="Login Page Tests Unsuccessful Login with Incorrect Credentials" time="7.758" classname="Unsuccessful Login with Incorrect Credentials">
+      <failure message="Timed out retrying after 4000ms: Expected to find element: `.error-message`, but never found it." type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: Expected to find element: `.error-message`, but never found it.
+    at Context.eval (webpack://salevali_cypress_web_tests/./cypress/e2e/login.cy.js:26:31)]]></failure>
+    </testcase>
+    <testcase name="Login Page Tests Cannot Login with Empty Fields" time="5.871" classname="Cannot Login with Empty Fields">
+      <failure message="Timed out retrying after 4000ms: Expected to find element: `.email-error`, but never found it." type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: Expected to find element: `.email-error`, but never found it.
+    at Context.eval (webpack://salevali_cypress_web_tests/./cypress/e2e/login.cy.js:34:29)]]></failure>
+    </testcase>
+    <testcase name="Login Page Tests Remember Me Option" time="1.926" classname="Remember Me Option">
+      <failure message="`cy.type()` can only accept a string or number. You passed in: `undefined`
+
+https://on.cypress.io/type" type="CypressError"><![CDATA[CypressError: `cy.type()` can only accept a string or number. You passed in: `undefined`
+
+https://on.cypress.io/type
+    at Context.type (https://app.salevali.com/__cypress/runner/cypress_runner.js:115427:68)
+    at wrapped (https://app.salevali.com/__cypress/runner/cypress_runner.js:138145:19)
+From Your Spec Code:
+    at Context.eval (webpack://salevali_cypress_web_tests/./cypress/e2e/login.cy.js:40:34)]]></failure>
+    </testcase>
+    <testcase name="Login Page Tests Toggle Password Visibility" time="1.577" classname="Toggle Password Visibility">
+      <failure message="`cy.type()` can only accept a string or number. You passed in: `undefined`
+
+https://on.cypress.io/type" type="CypressError"><![CDATA[CypressError: `cy.type()` can only accept a string or number. You passed in: `undefined`
+
+https://on.cypress.io/type
+    at Context.type (https://app.salevali.com/__cypress/runner/cypress_runner.js:115427:68)
+    at wrapped (https://app.salevali.com/__cypress/runner/cypress_runner.js:138145:19)
+From Your Spec Code:
+    at Context.eval (webpack://salevali_cypress_web_tests/./cypress/e2e/login.cy.js:52:37)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

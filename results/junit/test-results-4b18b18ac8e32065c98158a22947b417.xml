@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="72.690" tests="2" failures="2">
+  <testsuite name="Root Suite" timestamp="2024-10-24T22:07:20" tests="0" file="cypress\e2e\language_selection.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Language Selection Tests" timestamp="2024-10-24T22:07:20" tests="2" time="72.682" failures="2">
+    <testcase name="Language Selection Tests Should switch to German language" time="6.070" classname="Should switch to German language">
+      <failure message="Timed out retrying after 4000ms: Expected to find element: `select.language-dropdown`, but never found it." type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: Expected to find element: `select.language-dropdown`, but never found it.
+    at Context.eval (webpack://salevali_cypress_web_tests/./cypress/e2e/language_selection.cy.js:9:9)]]></failure>
+    </testcase>
+    <testcase name="Language Selection Tests Should switch to English language" time="6.286" classname="Should switch to English language">
+      <failure message="Timed out retrying after 4000ms: Expected to find element: `select.language-dropdown`, but never found it." type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: Expected to find element: `select.language-dropdown`, but never found it.
+    at Context.eval (webpack://salevali_cypress_web_tests/./cypress/e2e/language_selection.cy.js:18:9)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
